@@ -1,30 +1,95 @@
-# quizmaster
+# QuizMaster AI
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+QuizMaster AI is a web application that allows users to create, manage, and take quizzes and flashcards with AI assistance.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/kimlocngo0011-gmailcoms-projects/v0-quizmaster)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/r8VD4i2I5ut)
+## Project Structure
 
-## Overview
+The project is organized as follows:
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+- `frontend/`: Contains all the frontend code (Next.js)
+- `backend/`: Contains all the backend code (Spring Boot)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+ for the frontend
+- Java 17+ for the backend
+- PostgreSQL database
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   \`\`\`bash
+   cd frontend
+   \`\`\`
+
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+3. Create a `.env.local` file with the following variables:
+   \`\`\`
+   NEXT_PUBLIC_API_URL=http://localhost:8080/api/v1
+   \`\`\`
+
+4. Start the development server:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+5. The frontend will be available at http://localhost:3000
+
+### Backend Setup
+
+1. Navigate to the backend directory:
+   \`\`\`bash
+   cd backend
+   \`\`\`
+
+2. Configure the database connection in `src/main/resources/application.properties`
+
+3. Build and run the application:
+   \`\`\`bash
+   ./mvnw spring-boot:run
+   \`\`\`
+
+4. The backend API will be available at http://localhost:8080/api/v1
+
+## Features
+
+- User authentication (register, login, password reset)
+- Quiz creation and management
+- Flashcard creation and study
+- AI-assisted content generation
+- Chat with AI for learning assistance
+- User profile and statistics
+- Admin dashboard for content moderation
+
+## Technologies Used
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+
+### Backend
+- Spring Boot
+- Spring Security
+- Spring Data JPA
+- PostgreSQL
+- JWT Authentication
 
 ## Deployment
 
-Your project is live at:
+The application can be deployed using Vercel for the frontend and a suitable Java hosting service for the backend.
 
-**[https://vercel.com/kimlocngo0011-gmailcoms-projects/v0-quizmaster](https://vercel.com/kimlocngo0011-gmailcoms-projects/v0-quizmaster)**
+## License
 
-## Build your app
+This project is licensed under the MIT License.
+\`\`\`
 
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/r8VD4i2I5ut](https://v0.dev/chat/projects/r8VD4i2I5ut)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Let's update the tsconfig.json file to ensure proper TypeScript configuration:
