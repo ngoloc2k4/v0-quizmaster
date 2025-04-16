@@ -1,6 +1,6 @@
 import axios, { type AxiosError, type AxiosInstance, type AxiosRequestConfig, type AxiosResponse } from "axios"
 
-// Define the base API URL
+// Import environment configuration
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api/v1"
 
 // Create a class to handle API requests

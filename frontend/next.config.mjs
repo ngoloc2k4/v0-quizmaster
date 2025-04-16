@@ -17,7 +17,10 @@ const nextConfig = {
       },
     ],
   },
-  // Add any additional configuration needed for your specific deployment
+  // Remove test-specific configurations
+  env: {
+    NODE_ENV: 'production',
+  },
 }
 
 export default nextConfig
