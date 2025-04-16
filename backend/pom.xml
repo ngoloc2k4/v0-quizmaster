@@ -93,6 +93,14 @@
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.3.0</version>
 		</dependency>
+		
+		<!-- Embedded MongoDB for testing -->
+		<dependency>
+		    <groupId>de.flapdoodle.embed</groupId>
+		    <artifactId>de.flapdoodle.embed.mongo</artifactId>
+		    <version>3.5.4</version>
+		    <scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
