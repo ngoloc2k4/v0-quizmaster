@@ -18,15 +18,22 @@ ENV_FILE="./backend/.env.production"
 
 # Backup existing file if it exists
 if [ -f "$ENV_FILE" ]; then
-  cp "$ENV_FILE" "${ENV_FILE}.backup"
-  echo "Backed up existing $ENV_FILE to ${ENV_FILE}.backup"
+ cp "$ENV_FILE" "${ENV_FILE}.backup"
+ echo "Backed up existing $ENV_FILE to ${ENV_FILE}.backup"
 fi
 
 # Update JWT_SECRET in the .env file
 if grep -q "JWT_SECRET=" "$ENV_FILE" 2>/dev/null; then
-  sed -i "s/JWT_SECRET=.*/JWT_SECRET=$JWT_SECRET/" "$ENV_FILE"
+ sed -i "s/JWT_SECRET=.*/JWT_SECRET=$JWT_SECRET/" "$ENV_FILE"
 else
-  echo "JWT_SECRET=$JWT_SECRET" >> "$ENV_FILE"
+ echo "JWT_SECRET=$JWT_SECRET" >> "$ENV_FILE"
+fi
+
+# Update MONGODB_PASSWORD in the .env file
+if grep -q "MONGODB_PASSWORD=" "$ENV_FILE" 2>/dev/null; then
+ sed -i "s/MONGODB_PASSWORD=.*/MONGODB_PASSWORD=$MONGODB_PASSWORD/" "$ENV_FILE"
+else
+ echo "MONGODB_PASSWORD=$MONGODB_PASSWORD" >> "$ENV_FILE"
 fi
 
 echo "Updated JWT_SECRET in $ENV_FILE"

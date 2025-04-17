@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class OpenrouterConfig {
     
-    @Value("${openrouter.api.key}")
+    @Value("${OPENROUTER_API_KEY}")
     private String apiKey;
     
     @Value("${openrouter.api.url}")
